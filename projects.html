@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Selokar - Projects</title>
+    <style>
+         /* Global Styles */
+         body {
+             font-family:'Arial', sans-serif ;
+             margin :0 ;
+             padding :0 ;
+             background-color:#fafafa ;
+             color:#333 ;
+         }
+         
+         nav {
+             display:flex ;
+             justify-content:center ;
+             gap :20px ;
+             background-color:#444 ;
+             padding :15px ;
+             position :sticky ; /* Make navbar sticky */
+             top :0 ; /* Stick to top */
+             z-index :1000 ; /* Ensure it stays above other content */
+         }
+         
+         nav a {
+             color:white ;
+             font-weight:bold ;
+         }
+
+         section {
+             max-width :900px ;
+             margin :30px auto ;
+             padding :20px ;
+             background-color:white ;
+             border-radius :8px ;
+             box-shadow :0 4px 15px rgba(0,0,0,0.1);
+         }
+
+         footer {
+             text-align:center ; 
+             padding :15px ; 
+             background-color:#333 ; 
+             color:white ; 
+             font-size :0.9em ; 
+         }
+         
+         h2 {
+              color:#ff7043 ; 
+         }
+
+         .project {
+              border-bottom :1px solid #ddd ; 
+              padding :10px ; 
+         }
+
+         .project:last-child {
+              border-bottom:none ; 
+         }
+
+         .project h3 {
+              margin :5px 0 ; 
+         }
+         
+         .project p {
+              margin-bottom :5px ; 
+              color:#666 ; 
+         }
+
+         .project-meta {
+              font-size :0.9em ; 
+              color:#888 ; 
+         }
+         
+         .project a {
+              display:inline-block ; 
+              margin-top :10px ; 
+              color:#ff7043 ; 
+              border-bottom :1px solid #ff7043 ;  
+         }
+     </style>
+</head>
+
+<body>
+
+<nav>
+     <a href="index.html">Home</a>
+     <a href="posts.html">Posts</a>
+     <a href="projects.html">Projects</a>  
+ </nav>
+
+<section id="projects">
+     <h2>Featured Projects</h2>
+
+     <div class="project">
+         <h3>AI for Agricultural Disease Detection</h3>
+         <p>This project aims to develop a deep learning model that can detect plant diseases...</p>
+         <div class="project-meta">Technologies used | Date:</div>
+         <a href="#" target="_blank">View Project</a>  
+     </div>
+
+     <div class="project">
+         <h3>Predictive Maintenance with Time Series Data</h3>
+         <p>This project uses machine learning algorithms to predict equipment failure...</p>
+         <div class="project-meta">Technologies used | Date:</div>  
+         <a href="#" target="_blank">View Project</a>  
+     </div>
+
+     <div class="project">
+         <h3>Natural Language Processing for Sentiment Analysis</h3>
+         <p>This project focuses on building a sentiment analysis model using NLP techniques...</p>  
+         <div class="project-meta">Technologies used | Date:</div>  
+         <a href="#" target="_blank">View Project</a>  
+     </div>
+
+ </section>
+
+<footer >
+     &copy;2024 Abhishek Selokar.All rights reserved.
+ </footer >
+
+ </body >
+ </html >
