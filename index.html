@@ -53,8 +53,20 @@
             font-weight: bold;
         }
 
-        /* Post List Styles */
-        .posts, .projects {
+        /* Hero Section */
+        .hero {
+            background-image: url('https://source.unsplash.com/1600x400/?data-science');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h2 {
+            font-size: 2em;
+        }
+
+        /* Section Styles */
+        section {
             max-width: 900px;
             margin: 30px auto;
             padding: 20px;
@@ -62,47 +74,73 @@
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
+
+        /* Post and Project Styles */
+        .posts, .projects {
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            gap: 20px; 
+        }
+        
         .post, .project {
-            border-bottom: 1px solid #ddd;
-            padding: 20px 0;
+            border-radius: 8px; 
+            overflow: hidden; 
+            transition: transform 0.3s; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        .post:last-child, .project:last-child {
-            border-bottom: none;
+        
+        .post:hover, .project:hover {
+            transform: scale(1.05); 
         }
+
+        .post img, .project img {
+            width: 100%; 
+            height: auto; 
+        }
+
+        .post-content, .project-content {
+            padding: 15px; 
+        }
+
         .post h2, .project h2 {
-            font-size: 1.8em;
-            margin: 0;
+            font-size: 1.5em; 
+            margin-bottom: 10px; 
         }
+        
         .post p, .project p {
-            color: #666;
+            color: #666; 
         }
+        
         .post-meta, .project-meta {
-            font-size: 0.9em;
-            color: #888;
+            font-size: 0.9em; 
+            color: #888; 
         }
+        
         .post a, .project a {
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 10px;
-            color: #ff7043;
-            border-bottom: 1px solid #ff7043;
+            font-weight: bold; 
+            display: inline-block; 
+            margin-top: 10px; 
+            color: #ff7043; 
+            border-bottom: 1px solid #ff7043; 
         }
 
         /* Footer Styles */
         footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #333;
-            color: white;
-            font-size: 0.9em;
+            text-align: center; 
+            padding: 15px; 
+            background-color: #333; 
+            color: white; 
+            font-size: 0.9em; 
         }
 
         /* Media Queries for Responsiveness */
         @media (max-width: 768px) {
-            .post h2, .project h2 {
-                font-size: 1.6em;
-            }
-        }
+           header h1 { font-size: 2em; }
+           header p { font-size: 1em; }
+           nav { flex-direction: column; gap: 10px; }
+           section { padding-left :10px ;padding-right :10px;}
+           .post h2, .project h2 { font-size :1.3em;}
+       }
     </style>
 </head>
 <body>
@@ -117,53 +155,79 @@
     <a href="#projects">Projects</a>
 </nav>
 
+<div class="hero">
+    <h2>Welcome to My Portfolio</h2>
+    <p>Explore my work in data science and machine learning.</p>
+</div>
+
 <section id="posts" class="posts">
     <h2>Recent Blog Posts</h2>
-    <div class="post">
-        <h2>Understanding Data Science Models</h2>
-        <p>In this post, I dive deep into various types of data science models, explaining how they work and where they are best applied.</p>
-        <div class="post-meta">Date: October 15, 2024 | Estimated Reading Time: 25 min | Author: Abhishek Selokar</div>
-        <a href="https://medium.com/@yourusername/understanding-data-science-models" target="_blank">Read Full Post</a>
-    </div>
     
     <div class="post">
-        <h2>Exploring Machine Learning Algorithms</h2>
-        <p>This post provides an overview of popular machine learning algorithms and discusses their pros and cons.</p>
-        <div class="post-meta">Date: October 8, 2024 | Estimated Reading Time: 20 min | Author: Abhishek Selokar</div>
-        <a href="https://medium.com/@yourusername/exploring-machine-learning-algorithms" target="_blank">Read Full Post</a>
+       <img src="https://source.unsplash.com/300x200/?data" alt="Blog Post Image">
+       <div class="post-content">
+           <h2>Understanding Data Science Models</h2>
+           <p>In this post, I dive deep into various types of data science models...</p>
+           <div class="post-meta">Date: October 15, 2024 | Estimated Reading Time: 25 min | Author:</div>
+           <a href="#" target="_blank">Read Full Post</a>
+       </div>
     </div>
 
     <div class="post">
-        <h2>Data Visualization Techniques for Data Scientists</h2>
-        <p>Learn about the most effective data visualization techniques that data scientists use to communicate insights effectively.</p>
-        <div class="post-meta">Date: October 1, 2024 | Estimated Reading Time: 30 min | Author: Abhishek Selokar</div>
-        <a href="https://medium.com/@yourusername/data-visualization-techniques-for-data-scientists" target="_blank">Read Full Post</a>
+       <img src="https://source.unsplash.com/300x200/?machine-learning" alt="Blog Post Image">
+       <div class="post-content">
+           <h2>Exploring Machine Learning Algorithms</h2>
+           <p>This post provides an overview of popular machine learning algorithms...</p>
+           <div class="post-meta">Date : October 8 ,2024 | Estimated Reading Time :20 min | Author :</div>
+           <a href="#" target="_blank">Read Full Post</a>
+       </div>
     </div>
+
+    <div class="post">
+       <img src="https://source.unsplash.com/300x200/?visualization" alt="Blog Post Image">
+       <div class="post-content">
+           <h2>Data Visualization Techniques for Data Scientists</h2>
+           <p>Learn about the most effective data visualization techniques...</p>
+           <div class="post-meta">Date : October1 ,2024 | Estimated Reading Time :30 min | Author :</div>
+           <a href="#" target="_blank">Read Full Post</a>
+       </div>
+    </div>
+
 </section>
 
 <section id="projects" class="projects">
     <h2>Featured Projects</h2>
-    <div class="project">
-        <h2>AI for Agricultural Disease Detection</h2>
-        <p>This project aims to develop a deep learning model that can detect plant diseases from images of crops, helping farmers to identify and treat diseases early.</p>
-        <div class="project-meta">Technologies: TensorFlow, Keras, OpenCV | Date: June 2024</div>
-        <a href="https://github.com/yourusername/agricultural-disease-detection" target="_blank">View Project</a>
-    </div>
 
-    
     <div class="project">
-        <h2>Predictive Maintenance with Time Series Data</h2>
-        <p>This project uses machine learning algorithms to predict equipment failure in manufacturing environments, helping reduce downtime and improve maintenance strategies.</p>
-        <div class="project-meta">Technologies: Python, scikit-learn, pandas | Date: March 2024</div>
-        <a href="https://github.com/yourusername/predictive-maintenance" target="_blank">View Project</a>
+       <img src="https://source.unsplash.com/300x200/?agriculture" alt="Project Image">
+       <div class="project-content">
+           <h2>AI for Agricultural Disease Detection</h2>
+           <p>This project aims to develop a deep learning model that can detect plant diseases...</p>
+           <div class="project-meta">Technologies : TensorFlow , Keras , OpenCV | Date : June2024</div>
+           <a href="#" target="_blank">View Project</a>
+       </div>
     </div>
 
     <div class="project">
-        <h2>Natural Language Processing for Sentiment Analysis</h2>
-        <p>This project focuses on building a sentiment analysis model using NLP techniques, capable of analyzing customer feedback and reviews to gauge sentiment.</p>
-        <div class="project-meta">Technologies: NLP, TensorFlow, Python | Date: January 2024</div>
-        <a href="https://github.com/yourusername/sentiment-analysis" target="_blank">View Project</a>
+       <img src="https://source.unsplash.com/300x200/?maintenance" alt="Project Image">
+       <div class="project-content">
+           <h2>Predictive Maintenance with Time Series Data</h2>
+           <p>This project uses machine learning algorithms to predict equipment failure...</p>
+           <div class="project-meta">Technologies : Python , scikit-learn , pandas | Date : March2024</div>
+           <a href="#" target="_blank">View Project</a>
+       </div>
     </div>
+
+    <div class="project">
+       <img src="https://source.unsplash.com/300x200/?nlp" alt="Project Image">
+       <div class="project-content">
+           <h2>Natural Language Processing for Sentiment Analysis</h2>
+           <p>This project focuses on building a sentiment analysis model using NLP techniques...</p>
+           <div class="project-meta">Technologies : NLP , TensorFlow , Python | Date : January2024</div>
+           <a href="#" target="_blank">View Project</a>
+       </div>
+    </div>
+
 </section>
 
 <footer>
