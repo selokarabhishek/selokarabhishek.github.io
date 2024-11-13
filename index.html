@@ -47,6 +47,9 @@
             gap: 20px;
             background-color: #444;
             padding: 15px;
+            position: sticky; /* Make navbar sticky */
+            top: 0; /* Stick to top */
+            z-index: 1000; /* Ensure it stays above other content */
         }
         nav a {
             color: white;
@@ -57,12 +60,17 @@
         .hero {
             background-image: url('https://source.unsplash.com/1600x400/?data-science');
             background-size: cover;
-            color: white;
+            color: white; /* Change this to desired color */
             text-align: center;
             padding: 100px 20px;
         }
         .hero h2 {
-            font-size: 2em;
+            font-size: 2em; 
+            color: #ff7043; /* Change text color here */
+        }
+        .hero p {
+            font-size: 1.2em; 
+            color: #ffe082; /* Change subtitle color here */
         }
 
         /* Section Styles */
@@ -133,13 +141,13 @@
             font-size: 0.9em; 
         }
 
-        /* Media Queries for Responsiveness */
-        @media (max-width: 768px) {
-           header h1 { font-size: 2em; }
-           header p { font-size: 1em; }
-           nav { flex-direction: column; gap: 10px; }
+         /* Media Queries for Responsiveness */
+         @media (max-width :768px) {
+           header h1 { font-size :2em;}
+           header p { font-size :1em;}
+           nav { flex-direction :column ;gap :10px;}
            section { padding-left :10px ;padding-right :10px;}
-           .post h2, .project h2 { font-size :1.3em;}
+           .post h2 , .project h2 { font-size :1.3em;}
        }
     </style>
 </head>
@@ -151,11 +159,12 @@
 </header>
 
 <nav>
+    <a href="#home">Home</a>
     <a href="#posts">Posts</a>
     <a href="#projects">Projects</a>
 </nav>
 
-<div class="hero">
+<div class="hero" id="home">
     <h2>Welcome to My Portfolio</h2>
     <p>Explore my work in data science and machine learning.</p>
 </div>
@@ -168,7 +177,7 @@
        <div class="post-content">
            <h2>Understanding Data Science Models</h2>
            <p>In this post, I dive deep into various types of data science models...</p>
-           <div class="post-meta">Date: October 15, 2024 | Estimated Reading Time: 25 min | Author:</div>
+           <div class="post-meta">Date : October15 ,2024 | Estimated Reading Time :25 min | Author :</div>
            <a href="#" target="_blank">Read Full Post</a>
        </div>
     </div>
@@ -178,7 +187,7 @@
        <div class="post-content">
            <h2>Exploring Machine Learning Algorithms</h2>
            <p>This post provides an overview of popular machine learning algorithms...</p>
-           <div class="post-meta">Date : October 8 ,2024 | Estimated Reading Time :20 min | Author :</div>
+           <div class="post-meta">Date : October8 ,2024 | Estimated Reading Time :20 min | Author :</div>
            <a href="#" target="_blank">Read Full Post</a>
        </div>
     </div>
