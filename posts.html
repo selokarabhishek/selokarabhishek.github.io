@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Selokar - Blog Posts</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+        }
+        
+        nav {
+           display:flex ;
+           justify-content:center ;
+           gap :20px ;
+           background-color:#444 ;
+           padding :15px ;
+           position :sticky ; /* Make navbar sticky */
+           top :0 ; /* Stick to top */
+           z-index :1000 ; /* Ensure it stays above other content */
+       }
+       
+       nav a {
+           color:white ;
+           font-weight:bold ;
+       }
+
+       section {
+           max-width :900px ;
+           margin :30px auto ;
+           padding :20px ;
+           background-color:white ;
+           border-radius :8px ;
+           box-shadow :0 4px 15px rgba(0,0,0,0.1);
+       }
+
+       footer {
+           text-align:center ; 
+           padding :15px ; 
+           background-color :#333 ; 
+           color:white ; 
+           font-size :0.9em ; 
+       }
+       
+       h2 {
+          color:#ff7043 ; 
+       }
+
+       .post {
+          border-bottom :1px solid #ddd ; 
+          padding :10px ; 
+       }
+
+       .post:last-child {
+          border-bottom:none ; 
+       }
+
+       .post h3 {
+          margin :5px 0 ; 
+       }
+       
+       .post p {
+          margin-bottom :5px ; 
+          color:#666 ; 
+       }
+
+       .post-meta {
+          font-size :0.9em ; 
+          color:#888 ; 
+       }
+       
+       .post a {
+          display:inline-block ; 
+          margin-top :10px ; 
+          color:#ff7043 ; 
+          border-bottom :1px solid #ff7043 ; 
+       }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="posts.html">Posts</a>
+    <a href="projects.html">Projects</a>
+</nav>
+
+<section id="posts">
+    <h2>Recent Blog Posts</h2>
+
+    <div class="post">
+        <h3>Understanding Data Science Models</h3>
+        <p>In this post, I dive deep into various types of data science models...</p>
+        <div class="post-meta">Date : October15 ,2024 | Author :</div>
+        <a href="#" target="_blank">Read Full Post</a>
+    </div>
+
+    <div class="post">
+        <h3>Exploring Machine Learning Algorithms</h3>
+        <p>This post provides an overview of popular machine learning algorithms...</p>
+        <div class="post-meta">Date : October8 ,2024 | Author :</div>
+        <a href="#" target="_blank">Read Full Post</a>
+    </div>
+
+    <div class="post">
+        <h3>Data Visualization Techniques for Data Scientists</h3>
+        <p>Learn about the most effective data visualization techniques...</p>
+        <div class="post-meta">Date : October1 ,2024 | Author :</div>
+        <a href="#" target="_blank">Read Full Post</a>
+    </div>
+
+</section>
+
+<footer>
+    &copy; 2024 Abhishek Selokar. All rights reserved.
+</footer>
+
+</body>
+</html>
