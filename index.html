@@ -13,6 +13,7 @@
             background-color: #fafafa;
             color: #333;
             line-height: 1.6;
+            scroll-behavior: smooth; /* Enables smooth scrolling */
         }
         a {
             color: #ff7043;
@@ -112,14 +113,11 @@
 </header>
 
 <nav>
-    <a href="#">Home</a>
-    <a href="#">Posts</a>
-    <a href="#">Projects</a>
-    
-
+    <a href="#posts">Posts</a>
+    <a href="#projects">Projects</a>
 </nav>
 
-<section class="posts">
+<section id="posts" class="posts">
     <h2>Recent Blog Posts</h2>
     <div class="post">
         <h2>Understanding Data Science Models</h2>
@@ -143,7 +141,7 @@
     </div>
 </section>
 
-<section class="projects">
+<section id="projects" class="projects">
     <h2>Featured Projects</h2>
     <div class="project">
         <h2>AI for Agricultural Disease Detection</h2>
