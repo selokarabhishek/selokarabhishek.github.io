@@ -3,13 +3,28 @@ const themeToggle = document.getElementById('theme-toggle');
 const html = document.documentElement;
 
 // Check for saved theme preference or default to dark mode
-const currentTheme = localStorage.getItem('theme') || 'dark';
-html.setAttribute('data-theme', currentTheme);
+const savedTheme = localStorage.getItem('theme') || 'dark';
+
+// Apply theme
+function applyTheme(theme) {
+    if (theme === 'light') {
+        html.setAttribute('data-theme', 'light');
+    } else {
+        html.removeAttribute('data-theme');
+    }
+}
+
+// Get current theme
+function getCurrentTheme() {
+    return html.hasAttribute('data-theme') && html.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+}
 
 // Update icon based on current theme
 function updateThemeIcon() {
     const icon = themeToggle.querySelector('i');
-    if (html.getAttribute('data-theme') === 'light') {
+    const currentTheme = getCurrentTheme();
+
+    if (currentTheme === 'light') {
         icon.classList.remove('fa-sun');
         icon.classList.add('fa-moon');
     } else {
@@ -18,15 +33,16 @@ function updateThemeIcon() {
     }
 }
 
-// Initialize icon
+// Initialize theme
+applyTheme(savedTheme);
 updateThemeIcon();
 
 // Toggle theme
 themeToggle.addEventListener('click', () => {
-    const currentTheme = html.getAttribute('data-theme');
+    const currentTheme = getCurrentTheme();
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-    html.setAttribute('data-theme', newTheme);
+    applyTheme(newTheme);
     localStorage.setItem('theme', newTheme);
     updateThemeIcon();
 
