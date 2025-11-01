@@ -6,7 +6,7 @@
 }
 
 :root {
-    /* Color Palette */
+    /* Dark Mode Colors (Default) */
     --primary-color: #6366f1;
     --secondary-color: #8b5cf6;
     --accent-color: #ec4899;
@@ -37,6 +37,29 @@
     --spacing-xl: 6rem;
 }
 
+/* Light Mode Colors */
+[data-theme="light"] {
+    --primary-color: #4f46e5;
+    --secondary-color: #7c3aed;
+    --accent-color: #db2777;
+    --dark-bg: #f1f5f9;
+    --darker-bg: #ffffff;
+    --light-text: #1e293b;
+    --gray-text: #475569;
+    --card-bg: #f8fafc;
+    --border-color: #e2e8f0;
+    --success-color: #059669;
+
+    --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    --gradient-accent: linear-gradient(135deg, #db2777 0%, #7c3aed 100%);
+    --gradient-dark: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+    --glow: 0 0 20px rgba(79, 70, 229, 0.3);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -47,6 +70,7 @@ body {
     color: var(--light-text);
     line-height: 1.6;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -131,6 +155,32 @@ body {
 .nav-link:hover::after,
 .nav-link.active::after {
     width: 100%;
+}
+
+.theme-toggle {
+    background: transparent;
+    border: 2px solid var(--border-color);
+    color: var(--light-text);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+}
+
+.theme-toggle:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: rotate(15deg) scale(1.1);
+}
+
+.theme-toggle i {
+    transition: transform 0.3s ease;
 }
 
 .hamburger {
