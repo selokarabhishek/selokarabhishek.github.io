@@ -53,7 +53,7 @@ const typedTextSpan = document.querySelector('.typed-text');
 const cursorSpan = document.querySelector('.cursor');
 
 const textArray = [
-    'Full Stack Developer',
+    'Data Scientist',
     'AI/ML Engineer',
     'Problem Solver',
     'Tech Enthusiast',
