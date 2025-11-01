@@ -158,7 +158,7 @@ body {
 }
 
 .theme-toggle {
-    background: transparent;
+    background: rgba(99, 102, 241, 0.1);
     border: 2px solid var(--border-color);
     color: var(--light-text);
     width: 45px;
@@ -181,6 +181,18 @@ body {
 
 .theme-toggle i {
     transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 2px currentColor);
+}
+
+/* Make moon icon more visible in light mode */
+[data-theme="light"] .theme-toggle {
+    background: rgba(79, 70, 229, 0.15);
+    border-color: var(--primary-color);
+}
+
+[data-theme="light"] .theme-toggle i {
+    color: var(--primary-color);
+    filter: drop-shadow(0 0 3px rgba(79, 70, 229, 0.5));
 }
 
 .hamburger {
