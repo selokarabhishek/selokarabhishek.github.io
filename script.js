@@ -54,10 +54,7 @@ const cursorSpan = document.querySelector('.cursor');
 
 const textArray = [
     'Data Scientist',
-    'AI/ML Engineer',
-    'Problem Solver',
-    'Tech Enthusiast',
-    'Lifelong Learner'
+    'Problem Solver'
 ];
 
 const typingDelay = 100;
