@@ -475,25 +475,112 @@ section {
     background: var(--dark-bg);
 }
 
-.about-content {
-    max-width: 800px;
+.about-unified {
+    max-width: 900px;
     margin: 0 auto;
 }
 
-.about-text-condensed {
+.about-intro {
     text-align: center;
+    margin-bottom: 3rem;
 }
 
-.about-text-condensed p {
+.about-intro p {
     color: var(--gray-text);
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.about-text-condensed strong {
+/* Journey Timeline - Compact Horizontal Design */
+.journey-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.journey-item {
+    background: var(--card-bg);
+    border-radius: 15px;
+    border: 2px solid var(--border-color);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.journey-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.journey-item:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: var(--glow);
+}
+
+.journey-item:hover::before {
+    opacity: 1;
+}
+
+.journey-year {
+    font-size: 0.85rem;
     color: var(--primary-color);
     font-weight: 600;
+    margin-bottom: 1rem;
+    display: inline-block;
+    background: rgba(99, 102, 241, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+}
+
+.journey-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.journey-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.journey-content h4 {
+    font-size: 1.1rem;
+    color: var(--light-text);
+    font-weight: 600;
+    margin: 0;
+}
+
+.journey-company {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.journey-desc {
+    color: var(--gray-text);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
 }
 
 /* ==================== SKILLS SECTION ==================== */
@@ -1121,6 +1208,10 @@ section {
 
     .hero-buttons {
         flex-direction: column;
+    }
+
+    .journey-timeline {
+        grid-template-columns: 1fr;
     }
 
     .projects-grid {
