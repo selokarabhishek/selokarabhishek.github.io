@@ -1,343 +1,372 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhishek Selokar - Data Science Blog & Portfolio</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fafafa;
-            color: #333;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-        a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
-        a:hover {
-            color: #0c47a1;
-        }
-
-        /* Header Styles */
-        header {
-            text-align: center;
-            padding: 30px;
-            background-color: #f4f4f9;
-        }
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-            color: #333;
-        }
-        header p {
-            font-size: 1.2em;
-            color: #555;
-        }
-
-        /* Profile Image */
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin: 20px auto;
-        }
-        .profile-image img {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Navigation Styles */
-/*         nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 15px;
-            background-color: #f4f4f9;
-            border-bottom: 1px solid #ddd;
-        }
-        nav a {
-            color: #333;
-            font-weight: bold;
-        } */
-        /* Navigation Styles */
-        nav {
-            color: #333;
-            font-weight: bold;
-            text-decoration: none; /* Remove underline */
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease; /* Smooth hover effect */
-        }
-        
-        nav a:hover {
-            background-color: #e1e8ed; /* Light background on hover */
-            color: #0c47a1;
-        }
-
-
-        /* Main Content Styles */
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-        }
-
-        /* About Section */
-        #about {
-            text-align: left;
-        }
-        #about h2 {
-            font-size: 2em;
-            color: #333;
-            margin-top: 0;
-        }
-        #about p {
-            color: #555;
-            line-height: 1.6;
-        }
-
-        /* Social Links */
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            padding: 20px 0;
-        }
-        .social-links a {
-            color: #555;
-            font-size: 1em;
-        }
-
-        /* Footer Styles */
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #333;
-            color: white;
-            font-size: 0.9em;
-        }
-    </style>
+    <meta name="description" content="Abhishek Selokar - Software Engineer, AI/ML Enthusiast, Full Stack Developer">
+    <meta name="author" content="Abhishek Selokar">
+    <title>Abhishek Selokar | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">AS</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-<header>
-    <div class="profile-image">
-        <img src="https://raw.githubusercontent.com/selokarabhishek/github_pages_images/main/WhatsApp Image 2024-11-13 at 22.08.22.jpeg" alt="Abhishek Selokar Profile Image">
-    </div>
-    <h1>Abhishek Selokar</h1>
-    <p>Data Scientist</p>
-</header>
-
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="posts.html">Posts</a>
-    <a href="projects.html">Projects</a>
-</nav>
-
-<div class="container">
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm Abhishek Selokar, a data scientist with a passion for exploring data to uncover insights and build predictive models. I specialize in machine learning, data analysis, and visualization, striving to make complex data-driven decisions accessible and actionable.</p>
-        <p>My work spans diverse projects, from building AI solutions to optimize business processes to developing models that solve real-world problems. I'm committed to continuous learning and enjoy sharing knowledge with the community.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-particles"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Abhishek Selokar</h1>
+                <div class="hero-title-container">
+                    <h2 class="hero-title">I'm a <span class="typed-text"></span><span class="cursor">&nbsp;</span></h2>
+                </div>
+                <p class="hero-description">
+                    Passionate about building intelligent systems and creating seamless digital experiences.
+                    Transforming ideas into elegant code.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/selokarabhishek" target="_blank" rel="noopener" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/abhishek-selokar" target="_blank" rel="noopener" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:selokarabhishek@gmail.com" class="social-icon">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-border">
+                    <div class="profile-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <span class="scroll-icon"></span>
+            </a>
+        </div>
     </section>
 
-    <div class="social-links">
-        <a href="mailto:chip@thiswebsite.com">✉️ Email</a>
-        <a href="https://github.com/chip">🐙 GitHub</a>
-        <a href="https://twitter.com/chipro">🐦 Twitter</a>
-        <a href="https://linkedin.com/in/chiphuyen">💼 LinkedIn</a>
-    </div>
-</div>
-
-<footer>
-    &copy; 2024 Abhishek Selokar. All rights reserved.
-</footer>
-
-</body>
-</html>
- 
- -->
-
-
-
- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhishek Selokar - Data Science Blog & Portfolio</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f8fa;
-            color: #333;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-        a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
-        a:hover {
-            color: #0c47a1;
-        }
-
-        /* Header Styles */
-        header {
-            text-align: center;
-            padding: 40px;
-            background-color: #282c34;
-            color: #ffffff;
-        }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        header p {
-            font-size: 1.2em;
-            color: #aab0bc;
-            margin-top: 5px;
-        }
-
-        /* Profile Image */
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin: 20px auto;
-            border: 5px solid #ffffff;
-        }
-        .profile-image img {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Navigation Styles */
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            padding: 15px;
-            background-color: #ffffff;
-            border-bottom: 1px solid #ddd;
-            position: sticky;
-            top: 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        nav a {
-            color: #333;
-            font-weight: bold;
-            padding: 8px 15px;
-            border-radius: 4px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        nav a:hover {
-            background-color: #f4f4f9;
-            color: #0c47a1;
-        }
-
-        /* Main Content Styles */
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        /* About Section */
-        #about {
-            text-align: left;
-            padding: 10px;
-        }
-        #about h2 {
-            font-size: 2.5em;
-            color: #333;
-            margin-top: 0;
-            border-bottom: 2px solid #1a73e8;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
-        #about p {
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-        /* Social Links */
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            padding: 20px 0;
-        }
-        .social-links a {
-            color: #555;
-            font-size: 1.2em;
-            transition: color 0.3s;
-        }
-        .social-links a:hover {
-            color: #1a73e8;
-        }
-
-        /* Footer Styles */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #282c34;
-            color: #ffffff;
-            font-size: 0.9em;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <div class="profile-image">
-        <img src="https://raw.githubusercontent.com/selokarabhishek/github_pages_images/main/WhatsApp%20Image%202024-11-13%20at%2022.08.22.jpeg" alt="Abhishek Selokar Profile Image">
-    </div>
-    <h1>Abhishek Selokar</h1>
-    <p>Data Scientist</p>
-</header>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="posts.html">Posts</a>
-    <a href="projects.html">Projects</a>
-<!--     <a href="publication.html">Publication</a> -->
-</nav>
-
-<div class="container">
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm Abhishek Selokar, Data Scientist with over a year of hands-on experience in developing and deploying AI-driven solutions, including Machine Learning, Deep Learning, Computer Vision, Natural Language Processing (NLP), and Large Language Models (LLMs). With a strong academic background in AI and ML from IIT Kharagpur, specializing in healthcare applications, I excel at creating and optimizing intelligent systems to solve real-world challenges.</p>
-<!--         <p>My work spans diverse projects, from building AI solutions to optimize business processes to developing models that solve real-world problems. I'm committed to continuous learning and enjoy sharing knowledge with the community.</p> -->
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Who Am I?</h3>
+                    <p>
+                        I'm a dedicated software engineer with a passion for artificial intelligence, machine learning,
+                        and full-stack development. My journey in tech has been driven by curiosity and the desire to
+                        solve complex problems with elegant solutions.
+                    </p>
+                    <p>
+                        With expertise spanning from computer vision to web development, I thrive on learning new
+                        technologies and applying them to create meaningful impact. Whether it's building intelligent
+                        systems or crafting intuitive user experiences, I bring dedication and innovation to every project.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>10+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h4>5+</h4>
+                            <p>Technologies Mastered</p>
+                        </div>
+                        <div class="stat">
+                            <h4>100%</h4>
+                            <p>Commitment</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-card">
+                        <i class="fas fa-code"></i>
+                        <h4>Clean Code</h4>
+                        <p>Writing maintainable and efficient code</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-brain"></i>
+                        <h4>AI/ML Focus</h4>
+                        <p>Building intelligent solutions</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-rocket"></i>
+                        <h4>Innovation</h4>
+                        <p>Pushing boundaries with new tech</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <div class="social-links">
-        <a href="">✉️ Email</a>
-        <a href="https://github.com/selokarabhishek">🐙 GitHub</a>
-        <a href="https://medium.com/@imabhi1216">🐦 Medium</a>
-        <a href="www.linkedin.com/in/abhishek-244477175">💼 LinkedIn</a>
-    </div>
-</div>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI & Machine Learning</h3>
+                    <ul class="skill-list">
+                        <li><span class="skill-name">TensorFlow</span></li>
+                        <li><span class="skill-name">PyTorch</span></li>
+                        <li><span class="skill-name">Computer Vision</span></li>
+                        <li><span class="skill-name">NLP</span></li>
+                        <li><span class="skill-name">Deep Learning</span></li>
+                    </ul>
+                </div>
 
-<footer>
-    &copy; 2024 Abhishek Selokar. All rights reserved.
-</footer>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Programming Languages</h3>
+                    <ul class="skill-list">
+                        <li><span class="skill-name">Python</span></li>
+                        <li><span class="skill-name">JavaScript</span></li>
+                        <li><span class="skill-name">TypeScript</span></li>
+                        <li><span class="skill-name">Java</span></li>
+                        <li><span class="skill-name">C++</span></li>
+                    </ul>
+                </div>
 
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <ul class="skill-list">
+                        <li><span class="skill-name">React</span></li>
+                        <li><span class="skill-name">Node.js</span></li>
+                        <li><span class="skill-name">FastAPI</span></li>
+                        <li><span class="skill-name">HTML/CSS</span></li>
+                        <li><span class="skill-name">MongoDB</span></li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tools & Technologies</h3>
+                    <ul class="skill-list">
+                        <li><span class="skill-name">Git & GitHub</span></li>
+                        <li><span class="skill-name">Docker</span></li>
+                        <li><span class="skill-name">AWS</span></li>
+                        <li><span class="skill-name">Jupyter</span></li>
+                        <li><span class="skill-name">VS Code</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Sales Representative</h3>
+                        <p>An intelligent sales automation system powered by machine learning to enhance customer engagement and conversion rates.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ML</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-file-medical"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>ATS Resume Tracker</h3>
+                        <p>Resume tracking system using Google Gemini AI to help candidates optimize their resumes for ATS compatibility.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Gemini AI</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-x-ray"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Chest X-Ray Analyzer</h3>
+                        <p>Deep learning model for analyzing chest X-rays to assist in medical diagnostics with high accuracy.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Computer Vision</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">CNN</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Krushi Sarthi</h3>
+                        <p>Agricultural assistant platform helping farmers with crop recommendations and market insights using AI.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Full Stack</span>
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">React</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Recommender Chatbot</h3>
+                        <p>Intelligent chatbot system that provides personalized recommendations based on user preferences and behavior.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">ML</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-carrot"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Vegetable Classifier</h3>
+                        <p>Computer vision application for classifying different types of vegetables using deep learning techniques.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">CNN</span>
+                            <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">Computer Vision</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:selokarabhishek@gmail.com">selokarabhishek@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/selokarabhishek" target="_blank" rel="noopener">@selokarabhishek</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com/in/abhishek-selokar" target="_blank" rel="noopener">Abhishek Selokar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Abhishek Selokar. Crafted with passion by Claude.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/selokarabhishek" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/abhishek-selokar" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:selokarabhishek@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
