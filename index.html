@@ -304,17 +304,19 @@
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
+                <!-- Healthcare Projects -->
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://raw.githubusercontent.com/selokarabhishek/github_pages_images/main/freepik__candid-image-photography-natural-textures-highly-r__28041.jpeg" alt="Plant Disease Identification">
+                    <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-x-ray" style="font-size: 4rem; color: white;"></i>
                     </div>
                     <div class="project-content">
-                        <h3>Plant Disease Identification</h3>
-                        <p>Developed a vision transformer-based system for identifying plant diseases, achieving 92.47% accuracy using DINOv2 backbone. Robust model through data augmentation and self-supervised learning.</p>
+                        <h3>Mammography Lesion Detection System</h3>
+                        <p>Developed a transformer-based multi-class pathology detection system for mammography, achieving 15.2% mAP improvement over baseline with GroundingDINO and Swin Transformer v2 integration. Implemented advanced preprocessing and hard negative mining strategies.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">DINOv2</span>
-                            <span class="tech-tag">Vision Transformer</span>
+                            <span class="tech-tag">GroundingDINO</span>
+                            <span class="tech-tag">Swin-v2</span>
                             <span class="tech-tag">PyTorch</span>
+                            <span class="tech-tag">CUDA</span>
                         </div>
                         <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -326,10 +328,59 @@
                     </div>
                     <div class="project-content">
                         <h3>Chest X-ray Multi-Class Classifier</h3>
-                        <p>Built a multiclass classification system for chest X-ray pathology detection using DINOv2 vision transformer. Leveraged self-supervised learning for robust feature extraction across multiple disease categories.</p>
+                        <p>Built a multiclass classification system for chest X-ray pathology detection using DINOv2 vision transformer pretrained on mammography dataset with self-supervised learning for robust feature extraction across multiple disease categories.</p>
                         <div class="project-tech">
                             <span class="tech-tag">DINOv2</span>
                             <span class="tech-tag">Medical Imaging</span>
+                            <span class="tech-tag">SSL</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-microscope" style="font-size: 4rem; color: white;"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Swin Transformer Pretraining for Medical Localization</h3>
+                        <p>Pretrained Swin Transformer architecture on medical imaging data for downstream localization tasks. Leveraged hierarchical vision transformer design to improve spatial feature learning for precise anatomical structure detection.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Swin Transformer</span>
+                            <span class="tech-tag">Pretraining</span>
+                            <span class="tech-tag">Localization</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Agriculture & Other Projects -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://raw.githubusercontent.com/selokarabhishek/github_pages_images/main/freepik__pixel-art-8bits-a-farmer-chatbot-with-a-friendly-f__49978.jpeg" alt="Farmer Support ChatBot">
+                    </div>
+                    <div class="project-content">
+                        <h3>Farmer Support ChatBot</h3>
+                        <p>AI-powered multilingual chatbot to support farmers with queries related to agriculture, integrating voice support and decision-making for accurate responses.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Multilingual</span>
+                            <span class="tech-tag">Voice AI</span>
+                        </div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://raw.githubusercontent.com/selokarabhishek/github_pages_images/main/freepik__candid-image-photography-natural-textures-highly-r__28041.jpeg" alt="Plant Disease Identification">
+                    </div>
+                    <div class="project-content">
+                        <h3>Plant Disease Identification</h3>
+                        <p>Developed a plant disease classification system using DINOv2 pretrained backbone for robust feature extraction and accurate disease identification.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">DINOv2</span>
+                            <span class="tech-tag">Vision Transformer</span>
                             <span class="tech-tag">PyTorch</span>
                         </div>
                         <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
@@ -347,22 +398,6 @@
                             <span class="tech-tag">Llama 3</span>
                             <span class="tech-tag">SEO</span>
                             <span class="tech-tag">Fine-tuning</span>
-                        </div>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://raw.githubusercontent.com/selokarabhishek/github_pages_images/main/freepik__pixel-art-8bits-a-farmer-chatbot-with-a-friendly-f__49978.jpeg" alt="Farmer Support ChatBot">
-                    </div>
-                    <div class="project-content">
-                        <h3>Farmer Support ChatBot</h3>
-                        <p>AI-powered multilingual chatbot to support farmers with queries related to agriculture, integrating voice support and decision-making for accurate responses.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">NLP</span>
-                            <span class="tech-tag">Multilingual</span>
-                            <span class="tech-tag">Voice AI</span>
                         </div>
                         <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -395,23 +430,6 @@
                             <span class="tech-tag">YOLOv8</span>
                             <span class="tech-tag">Sentiment Analysis</span>
                             <span class="tech-tag">Computer Vision</span>
-                        </div>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-x-ray" style="font-size: 4rem; color: white;"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Mammography Lesion Detection System</h3>
-                        <p>Developed a transformer-based multi-class pathology detection system for mammography, achieving 15.2% mAP improvement over baseline with GroundingDINO and Swin Transformer v2 integration. Implemented advanced preprocessing and hard negative mining strategies.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">GroundingDINO</span>
-                            <span class="tech-tag">Swin-v2</span>
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">CUDA</span>
                         </div>
                         <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
