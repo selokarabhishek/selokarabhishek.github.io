@@ -1,0 +1,28 @@
+{
+  "name": "abhishek-selokar-portfolio",
+  "version": "1.0.0",
+  "description": "AI-powered portfolio for Abhishek Selokar - Data Scientist & ML Engineer",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": [
+    "portfolio",
+    "ai",
+    "machine-learning",
+    "data-science",
+    "computer-vision",
+    "nlp"
+  ],
+  "author": "Abhishek Selokar",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/selokarabhishek/selokarabhishek.github.io"
+  }
+}

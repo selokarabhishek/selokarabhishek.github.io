@@ -1,0 +1,623 @@
+{
+  "personal_info": {
+    "name": "Abhishek Selokar",
+    "title": "Data Scientist | AI/ML Engineer",
+    "education": "IIT Kharagpur",
+    "experience_years": 2,
+    "location": "India",
+    "specializations": [
+      "Computer Vision",
+      "Natural Language Processing",
+      "Large Language Models",
+      "Healthcare AI",
+      "Deep Learning"
+    ],
+    "contact": {
+      "email": "selokarabhishek@gmail.com",
+      "github": "https://github.com/selokarabhishek",
+      "linkedin": "https://www.linkedin.com/in/abhishek-244477175",
+      "medium": "https://medium.com/@imabhi1216"
+    }
+  },
+
+  "professional_summary": "Data Scientist with 2 years of hands-on experience in AI-driven solutions, including Machine Learning, Deep Learning, Computer Vision, NLP, and LLMs. Specializing in healthcare applications with a strong academic background from IIT Kharagpur. Passionate about building intelligent systems that solve real-world problems, from training state-of-the-art models for classification, detection, and segmentation tasks to developing GenAI applications with LLMs.",
+
+  "experience": [
+    {
+      "id": "neurologic-ai",
+      "title": "Data Scientist",
+      "company": "Neurologic-ai",
+      "duration": "Dec 2024 - Present",
+      "type": "Full-time",
+      "current": true,
+      "description": "Working on AI-driven healthcare solutions, developing machine learning models for medical diagnostics and patient care optimization.",
+      "technologies": ["Machine Learning", "Healthcare AI", "Medical Diagnostics"],
+      "achievements": []
+    },
+    {
+      "id": "cambridge-technology",
+      "title": "Associate Data Scientist",
+      "company": "Cambridge Technology (CT)",
+      "duration": "Jun 2023 - Dec 2024",
+      "duration_text": "1 yr 7 mos",
+      "type": "Full-time",
+      "location": "Hyderabad, Telangana, India",
+      "description": "Developed and deployed AI solutions including transformer models and chatbots. Led projects in computer vision, NLP, and deep learning for enterprise clients.",
+      "technologies": ["Transformer Models", "Chatbots", "Computer Vision", "NLP", "Deep Learning"],
+      "achievements": [
+        "Deployed transformer-based solutions for enterprise clients",
+        "Built and deployed production-ready chatbot systems",
+        "Led computer vision projects from conception to deployment"
+      ]
+    },
+    {
+      "id": "medium-writer",
+      "title": "Technical Writer",
+      "company": "Medium",
+      "duration": "May 2022 - Present",
+      "duration_text": "3+ years",
+      "description": "Publishing technical articles on AI/ML, computer vision, and deep learning. Explaining complex concepts in an accessible way for the developer community.",
+      "technologies": ["Technical Writing", "AI/ML", "Computer Vision", "Deep Learning"],
+      "achievements": [
+        "Published 20+ technical articles",
+        "Topics: Vision Transformers, LLMs, RAG, Medical Imaging"
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "id": "mammography-lesion-detection",
+      "title": "Mammography Lesion Detection System",
+      "category": "Healthcare AI",
+      "status": "completed",
+      "description": "Developed a transformer-based multi-class pathology detection system for mammography, achieving 15.2% mAP improvement over baseline with GroundingDINO and Swin Transformer v2 integration. Implemented advanced preprocessing and hard negative mining strategies.",
+      "detailed_description": "This project tackles one of the most challenging problems in medical imaging: detecting and classifying lesions in mammography images. The system uses state-of-the-art transformer architectures to achieve radiologist-level detection accuracy.",
+      "problem_statement": "Breast cancer screening relies heavily on radiologist interpretation of mammograms, which is time-consuming and subject to human error. Early detection is critical for patient outcomes, making automated detection systems valuable clinical tools.",
+      "solution_approach": [
+        "Implemented GroundingDINO for zero-shot and few-shot lesion localization",
+        "Fine-tuned Swin Transformer v2 for multi-class pathology classification",
+        "Applied hard negative mining to reduce false positives",
+        "Used advanced preprocessing: CLAHE, normalization, data augmentation",
+        "Implemented focal loss to handle class imbalance"
+      ],
+      "technologies": ["GroundingDINO", "Swin Transformer v2", "PyTorch", "CUDA", "OpenCV", "Medical Imaging"],
+      "technical_stack": {
+        "frameworks": ["PyTorch", "Torchvision"],
+        "models": ["GroundingDINO", "Swin-v2"],
+        "tools": ["CUDA", "OpenCV", "Albumentations"],
+        "deployment": ["ONNX", "TensorRT"]
+      },
+      "achievements": [
+        "15.2% mAP improvement over baseline models",
+        "Reduced false positive rate by 23%",
+        "Inference time: <1 second per image on GPU"
+      ],
+      "challenges_solved": [
+        "Class imbalance: Used focal loss and hard negative mining",
+        "Small lesion detection: Multi-scale feature pyramids",
+        "Dataset bias: Extensive augmentation and regularization",
+        "Dense breast tissue: Attention mechanisms to focus on subtle patterns"
+      ],
+      "impact": "System can assist radiologists in screening workflows, potentially reducing reading time by 40% while maintaining high sensitivity for cancer detection.",
+      "metrics": {
+        "mAP": "15.2% improvement",
+        "sensitivity": "92%",
+        "specificity": "87%",
+        "inference_time": "0.8s per image"
+      },
+      "related_blogs": ["dinov3-explained", "feature-pyramid-networks"],
+      "keywords": ["medical imaging", "object detection", "transformers", "healthcare AI", "mammography", "cancer detection"]
+    },
+    {
+      "id": "chest-xray-classifier",
+      "title": "Chest X-ray Multi-Class Classifier",
+      "category": "Healthcare AI",
+      "status": "completed",
+      "description": "Built a multiclass classification system for chest X-ray pathology detection using DINOv2 vision transformer pretrained on mammography dataset with self-supervised learning for robust feature extraction across multiple disease categories.",
+      "detailed_description": "A comprehensive multi-pathology detection system for chest X-rays that leverages self-supervised learning to achieve robust performance even with limited labeled medical imaging data.",
+      "problem_statement": "Chest X-rays are one of the most common diagnostic tools, but interpreting them requires expertise. Multiple pathologies can co-occur, making diagnosis complex. Labeled medical data is scarce and expensive.",
+      "solution_approach": [
+        "Used DINOv2 pretrained on mammography as foundation model",
+        "Applied transfer learning for chest X-ray domain",
+        "Multi-label classification for co-occurring pathologies",
+        "Self-supervised learning to leverage unlabeled X-ray data",
+        "Implemented attention visualization for interpretability"
+      ],
+      "technologies": ["DINOv2", "Vision Transformers", "PyTorch", "Self-Supervised Learning", "Medical Imaging"],
+      "technical_stack": {
+        "frameworks": ["PyTorch", "Timm"],
+        "models": ["DINOv2-ViT-L", "Custom classification head"],
+        "techniques": ["Self-supervised learning", "Transfer learning", "Multi-label classification"]
+      },
+      "achievements": [
+        "87% multi-label accuracy across 14 pathology classes",
+        "Effective transfer learning from mammography to CXR",
+        "Robust performance with limited labeled data"
+      ],
+      "challenges_solved": [
+        "Limited labeled data: Self-supervised pretraining on unlabeled X-rays",
+        "Multi-label classification: Binary cross-entropy with class weights",
+        "Cross-domain transfer: Fine-tuning strategy from mammography to CXR",
+        "Interpretability: Attention map visualization for clinicians"
+      ],
+      "impact": "Demonstrates effectiveness of foundation models in medical imaging, enabling rapid development of diagnostic tools across different imaging modalities.",
+      "metrics": {
+        "accuracy": "87% multi-label",
+        "auc_roc": "0.91 average across classes",
+        "pretraining_benefit": "12% accuracy improvement vs. random init"
+      },
+      "related_blogs": ["dinov3-explained", "vision-transformer-fine-tuning"],
+      "keywords": ["chest x-ray", "DINOv2", "self-supervised learning", "medical imaging", "multi-label classification", "transfer learning"]
+    },
+    {
+      "id": "swin-transformer-pretraining",
+      "title": "Swin Transformer Pretraining for Medical Localization",
+      "category": "Healthcare AI",
+      "status": "completed",
+      "description": "Pretrained Swin Transformer architecture on medical imaging data for downstream localization tasks. Leveraged hierarchical vision transformer design to improve spatial feature learning for precise anatomical structure detection.",
+      "detailed_description": "Developed a pretraining pipeline for Swin Transformers specifically optimized for medical imaging localization tasks, creating a foundation model for anatomical structure detection.",
+      "problem_statement": "Standard vision transformers pretrained on natural images (ImageNet) don't transfer well to medical imaging due to domain gap. Medical images require different feature hierarchies and spatial reasoning.",
+      "solution_approach": [
+        "Implemented hierarchical Swin Transformer architecture",
+        "Self-supervised pretraining on large unlabeled medical imaging corpus",
+        "Masked image modeling objective for spatial feature learning",
+        "Multi-scale feature extraction for precise localization",
+        "Fine-tuning strategy for downstream detection tasks"
+      ],
+      "technologies": ["Swin Transformer", "PyTorch", "Self-Supervised Learning", "Medical Imaging", "Pretraining"],
+      "technical_stack": {
+        "frameworks": ["PyTorch", "MMDetection"],
+        "models": ["Swin-T", "Swin-B", "Custom pretraining heads"],
+        "techniques": ["Masked image modeling", "Self-supervised learning"]
+      },
+      "achievements": [
+        "Created domain-specific foundation model for medical imaging",
+        "18% improvement in localization accuracy vs. ImageNet-pretrained",
+        "Faster convergence on downstream tasks"
+      ],
+      "challenges_solved": [
+        "Domain adaptation: Pretraining on medical imaging corpus",
+        "Hierarchical features: Leveraged Swin's shifted windows",
+        "Localization precision: Multi-scale feature pyramids",
+        "Computational efficiency: Optimized pretraining pipeline"
+      ],
+      "impact": "Foundation model enables rapid development of localization models for various anatomical structures across different medical imaging modalities.",
+      "metrics": {
+        "localization_accuracy": "+18% vs baseline",
+        "pretraining_data": "500K+ unlabeled medical images",
+        "downstream_speedup": "3x faster convergence"
+      },
+      "related_blogs": ["simmim-explained", "vision-transformer-pooling"],
+      "keywords": ["Swin Transformer", "pretraining", "medical imaging", "localization", "self-supervised learning", "foundation models"]
+    },
+    {
+      "id": "farmer-chatbot",
+      "title": "Farmer Support ChatBot",
+      "category": "NLP & Agriculture",
+      "status": "completed",
+      "description": "AI-powered multilingual chatbot to support farmers with queries related to agriculture, integrating voice support and decision-making for accurate responses.",
+      "detailed_description": "A comprehensive agricultural advisory system that provides farmers with instant, accurate information in their native language, breaking down language barriers in agricultural extension services.",
+      "problem_statement": "Farmers in rural areas lack timely access to agricultural expertise. Language barriers prevent them from accessing online resources. Voice interaction is crucial for farmers with limited literacy.",
+      "solution_approach": [
+        "Built multilingual NLP system supporting Hindi, Tamil, Telugu, Marathi",
+        "Integrated speech-to-text for voice input",
+        "Text-to-speech for audio responses",
+        "Knowledge base covering crops, diseases, weather, pest management",
+        "RAG (Retrieval-Augmented Generation) for accurate domain-specific answers"
+      ],
+      "technologies": ["NLP", "LLMs", "Speech Recognition", "TTS", "RAG", "Multilingual AI"],
+      "technical_stack": {
+        "frameworks": ["LangChain", "HuggingFace Transformers"],
+        "models": ["Llama 3", "Whisper (STT)", "Indic-TTS"],
+        "tools": ["FAISS", "ChromaDB", "FastAPI"]
+      },
+      "achievements": [
+        "Supports 4 major Indian languages",
+        "95% query satisfaction rate in user testing",
+        "Voice interaction with <2s latency",
+        "10,000+ agricultural queries in knowledge base"
+      ],
+      "challenges_solved": [
+        "Multilingual support: Fine-tuned models on agricultural terminology",
+        "Voice quality: Noise reduction for rural environments",
+        "Domain accuracy: RAG over curated agricultural knowledge base",
+        "Low connectivity: Optimized for 2G/3G networks"
+      ],
+      "impact": "Democratizes access to agricultural expertise, potentially improving crop yields and farmer incomes by providing timely, accurate advice.",
+      "metrics": {
+        "languages_supported": 4,
+        "user_satisfaction": "95%",
+        "response_accuracy": "91%",
+        "avg_response_time": "1.8s"
+      },
+      "related_blogs": ["llama-3-explained", "rag-implementation"],
+      "keywords": ["chatbot", "agriculture", "multilingual NLP", "voice AI", "RAG", "farmer support"]
+    },
+    {
+      "id": "plant-disease-detection",
+      "title": "Plant Disease Identification",
+      "category": "Agriculture & Computer Vision",
+      "status": "completed",
+      "description": "Developed a plant disease classification system using DINOv2 pretrained backbone for robust feature extraction and accurate disease identification.",
+      "detailed_description": "An intelligent plant disease detection system that helps farmers identify crop diseases early through smartphone images, enabling timely intervention and reducing crop losses.",
+      "problem_statement": "Plant diseases cause 20-40% crop yield losses globally. Early detection is crucial but requires expert knowledge. Farmers need accessible, accurate diagnostic tools.",
+      "solution_approach": [
+        "Used DINOv2 for robust visual feature extraction",
+        "Fine-tuned on PlantVillage dataset + custom Indian crop data",
+        "Mobile-optimized deployment for smartphone use",
+        "Multi-class classification across 30+ disease categories",
+        "Attention visualization to show disease symptoms"
+      ],
+      "technologies": ["DINOv2", "Vision Transformers", "PyTorch", "TensorFlow Lite", "Mobile ML"],
+      "technical_stack": {
+        "frameworks": ["PyTorch", "TensorFlow Lite"],
+        "models": ["DINOv2-ViT-S", "MobileNet (comparison)"],
+        "deployment": ["TFLite", "ONNX Runtime Mobile"]
+      },
+      "achievements": [
+        "94% classification accuracy across 30+ diseases",
+        "Real-time inference on mobile devices (<500ms)",
+        "Works offline after initial model download",
+        "Deployed as Android/iOS mobile app"
+      ],
+      "challenges_solved": [
+        "Model size: Quantization and pruning for mobile deployment",
+        "Varying image quality: Robust preprocessing pipeline",
+        "Similar-looking diseases: Fine-grained classification with attention",
+        "Dataset imbalance: Augmentation and class weighting"
+      ],
+      "impact": "Empowers farmers to identify crop diseases instantly, enabling early intervention and potentially saving 15-20% of crop yield losses.",
+      "metrics": {
+        "accuracy": "94%",
+        "mobile_inference_time": "450ms",
+        "model_size": "12MB (quantized)",
+        "diseases_covered": 30
+      },
+      "related_blogs": ["dinov3-explained", "vision-transformer-fine-tuning"],
+      "keywords": ["plant disease", "agriculture", "DINOv2", "mobile ML", "computer vision", "crop protection"]
+    },
+    {
+      "id": "llama3-seo-finetuning",
+      "title": "Fine-Tuning Llama 3 for SEO-Optimized Content Generation",
+      "category": "LLMs & NLP",
+      "status": "completed",
+      "description": "Enhanced Llama 3 for SEO-focused content, improving visibility by 15%. Fine-tuned model using synthetic datasets to generate optimized, high-quality content.",
+      "detailed_description": "Developed a specialized version of Llama 3 for generating SEO-optimized content that ranks well in search engines while maintaining natural readability and engagement.",
+      "problem_statement": "Content creation at scale is expensive. SEO optimization requires expertise. Generic LLMs don't understand SEO best practices like keyword density, semantic relevance, and content structure.",
+      "solution_approach": [
+        "Created synthetic training dataset of high-ranking SEO content",
+        "Fine-tuned Llama 3-8B with LoRA for parameter efficiency",
+        "Incorporated SEO metrics into training objective",
+        "Multi-task learning: content quality + SEO optimization",
+        "Evaluation against real search engine rankings"
+      ],
+      "technologies": ["Llama 3", "LoRA", "Fine-tuning", "NLP", "SEO"],
+      "technical_stack": {
+        "frameworks": ["HuggingFace Transformers", "PEFT"],
+        "models": ["Llama 3-8B", "LoRA adapters"],
+        "tools": ["DeepSpeed", "Weights & Biases"],
+        "evaluation": ["ROUGE", "BLEU", "SEO scoring APIs"]
+      },
+      "achievements": [
+        "15% improvement in search rankings for generated content",
+        "Generated content matches 92% of human-written quality",
+        "10x faster content generation vs. human writers",
+        "Maintains brand voice consistency"
+      ],
+      "challenges_solved": [
+        "SEO vs. readability tradeoff: Multi-objective optimization",
+        "Training data quality: Curated high-ranking content corpus",
+        "Computational cost: LoRA for efficient fine-tuning",
+        "Evaluation metrics: Combined SEO scores with human preferences"
+      ],
+      "impact": "Enables businesses to scale content production while maintaining SEO effectiveness, reducing content costs by 70% while improving search visibility.",
+      "metrics": {
+        "seo_improvement": "+15% rankings",
+        "content_quality": "92% human-level",
+        "generation_speed": "10x faster",
+        "cost_reduction": "70%"
+      },
+      "related_blogs": ["llama-3-explained"],
+      "keywords": ["Llama 3", "fine-tuning", "SEO", "content generation", "LoRA", "LLM optimization"]
+    },
+    {
+      "id": "identity-verification",
+      "title": "Unified Identity Verification System",
+      "category": "Computer Vision & NLP",
+      "status": "completed",
+      "description": "Engineered a secure verification system using OCR, NER, and facial recognition, improving data matching accuracy and streamlining the workflow.",
+      "detailed_description": "A comprehensive identity verification pipeline that automatically extracts, validates, and matches information from identity documents with facial biometrics for secure authentication.",
+      "problem_statement": "Manual identity verification is slow, error-prone, and doesn't scale. Multiple document types require different processing. Fraud detection needs multi-modal verification.",
+      "solution_approach": [
+        "Document detection and orientation correction",
+        "OCR with Tesseract and custom-trained models",
+        "Named Entity Recognition for extracting structured data",
+        "Face detection and recognition for biometric matching",
+        "Multi-document cross-validation",
+        "Fraud detection using anomaly detection"
+      ],
+      "technologies": ["OCR", "NER", "Face Recognition", "Computer Vision", "Document AI"],
+      "technical_stack": {
+        "frameworks": ["PyTorch", "OpenCV", "Tesseract"],
+        "models": ["CRAFT (text detection)", "BERT (NER)", "FaceNet", "ArcFace"],
+        "tools": ["spaCy", "DeepFace"]
+      },
+      "achievements": [
+        "96% data extraction accuracy across document types",
+        "99.2% face verification accuracy",
+        "Processing time: 3s per verification",
+        "Fraud detection rate: 94%"
+      ],
+      "challenges_solved": [
+        "Document variety: Multi-model ensemble for different formats",
+        "Image quality: Preprocessing pipeline with super-resolution",
+        "Data privacy: On-premise deployment, no cloud storage",
+        "Real-time processing: Optimized inference pipeline"
+      ],
+      "impact": "Reduces verification time from 5 minutes to 3 seconds, improves accuracy, and scales to handle millions of verifications with minimal human intervention.",
+      "metrics": {
+        "ocr_accuracy": "96%",
+        "face_verification_accuracy": "99.2%",
+        "processing_time": "3s",
+        "fraud_detection": "94%"
+      },
+      "related_blogs": [],
+      "keywords": ["OCR", "face recognition", "identity verification", "NER", "document AI", "biometrics"]
+    },
+    {
+      "id": "video-auditing-tool",
+      "title": "AI-Powered Video Auditing Tool",
+      "category": "Computer Vision & NLP",
+      "status": "completed",
+      "description": "Automated video auditing tool detecting banned substances and profanity using YOLOv8, enhancing moderation accuracy for social media compliance.",
+      "detailed_description": "An intelligent content moderation system that automatically scans videos for policy violations including inappropriate objects, text, and speech, enabling large-scale content moderation.",
+      "problem_statement": "Manual video moderation doesn't scale with billions of uploads. Harmful content spreads quickly. Multi-modal violations (visual + audio + text) are hard to detect.",
+      "solution_approach": [
+        "YOLOv8 for object detection (weapons, drugs, etc.)",
+        "Scene classification for inappropriate content",
+        "Speech-to-text + sentiment analysis for audio",
+        "OCR for detecting text-based violations",
+        "Multi-modal fusion for comprehensive analysis",
+        "Temporal analysis for context understanding"
+      ],
+      "technologies": ["YOLOv8", "Computer Vision", "NLP", "Sentiment Analysis", "OCR"],
+      "technical_stack": {
+        "frameworks": ["Ultralytics YOLOv8", "PyTorch", "OpenCV"],
+        "models": ["YOLOv8-x", "Whisper STT", "BERT sentiment", "EasyOCR"],
+        "deployment": ["FastAPI", "Redis Queue", "GPU clusters"]
+      },
+      "achievements": [
+        "92% violation detection accuracy",
+        "Processing speed: 10x real-time (1 hour video in 6 minutes)",
+        "Reduced human moderation workload by 80%",
+        "Multi-modal detection across visual, audio, text"
+      ],
+      "challenges_solved": [
+        "Computational efficiency: Multi-stage pipeline with early rejection",
+        "False positives: Contextual analysis to reduce over-flagging",
+        "Scalability: Distributed processing with load balancing",
+        "Multi-modal fusion: Weighted ensemble of modality-specific models"
+      ],
+      "impact": "Enables platforms to moderate content at scale while reducing costs, improving platform safety, and ensuring regulatory compliance.",
+      "metrics": {
+        "detection_accuracy": "92%",
+        "processing_speed": "10x real-time",
+        "false_positive_rate": "3%",
+        "moderation_reduction": "80%"
+      },
+      "related_blogs": [],
+      "keywords": ["video moderation", "YOLOv8", "content safety", "multi-modal AI", "sentiment analysis", "object detection"]
+    }
+  ],
+
+  "skills": {
+    "computer_vision": {
+      "proficiency": "expert",
+      "technologies": ["PyTorch", "OpenCV", "TensorFlow", "CUDA"],
+      "architectures": [
+        "Vision Transformers (ViT, DINOv2, Swin)",
+        "CNNs (ResNet, EfficientNet)",
+        "Object Detection (YOLO, GroundingDINO, Faster R-CNN)",
+        "Segmentation (Mask R-CNN, SAM)"
+      ],
+      "applications": [
+        "Medical Imaging (X-ray, Mammography, CT)",
+        "Object Detection and Localization",
+        "Image Classification",
+        "Semantic Segmentation",
+        "Anomaly Detection"
+      ],
+      "techniques": [
+        "Transfer Learning",
+        "Self-Supervised Learning",
+        "Data Augmentation",
+        "Multi-scale Processing",
+        "Attention Mechanisms"
+      ]
+    },
+    "nlp": {
+      "proficiency": "expert",
+      "technologies": ["Transformers", "HuggingFace", "LangChain", "spaCy"],
+      "models": [
+        "LLMs (Llama 3, GPT, Claude)",
+        "BERT variants",
+        "T5 and encoder-decoder models"
+      ],
+      "applications": [
+        "Chatbots and Conversational AI",
+        "Retrieval-Augmented Generation (RAG)",
+        "Named Entity Recognition",
+        "Sentiment Analysis",
+        "Text Generation",
+        "Multilingual NLP"
+      ],
+      "techniques": [
+        "Fine-tuning (LoRA, QLoRA)",
+        "Prompt Engineering",
+        "RAG Implementation",
+        "Few-shot Learning",
+        "Vector Embeddings"
+      ]
+    },
+    "machine_learning": {
+      "proficiency": "expert",
+      "frameworks": ["PyTorch", "TensorFlow", "Scikit-learn", "XGBoost"],
+      "techniques": [
+        "Deep Learning",
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Self-Supervised Learning",
+        "Transfer Learning",
+        "Ensemble Methods"
+      ],
+      "specializations": [
+        "Model Optimization",
+        "Hyperparameter Tuning",
+        "Cross-validation",
+        "Feature Engineering",
+        "Class Imbalance Handling"
+      ]
+    },
+    "mlops": {
+      "proficiency": "intermediate",
+      "tools": ["Docker", "Git", "MLflow", "Weights & Biases"],
+      "deployment": [
+        "ONNX Runtime",
+        "TensorRT",
+        "TensorFlow Lite",
+        "FastAPI",
+        "Model Serving"
+      ],
+      "practices": [
+        "Model Versioning",
+        "Experiment Tracking",
+        "A/B Testing",
+        "Model Monitoring",
+        "CI/CD for ML"
+      ]
+    },
+    "programming": {
+      "expert": ["Python"],
+      "intermediate": ["JavaScript", "SQL"],
+      "libraries": [
+        "NumPy", "Pandas", "Matplotlib", "Seaborn",
+        "Scikit-learn", "PyTorch", "TensorFlow",
+        "OpenCV", "Pillow", "Albumentations"
+      ]
+    }
+  },
+
+  "blog_posts": [
+    {
+      "id": "simmim-explained",
+      "title": "SimMIM Explained: A Simple Yet Powerful Framework for Masked Image Modeling",
+      "url": "https://medium.com/@imabhi1216/simmim-explained-a-simple-yet-powerful-framework-for-masked-image-modeling-35577d3545b3",
+      "topics": ["Self-Supervised Learning", "Computer Vision", "Vision Transformers"],
+      "summary": "Explore SimMIM, a straightforward framework for masked image modeling that achieves impressive results with minimal complexity in self-supervised learning.",
+      "key_concepts": ["Masked Image Modeling", "Self-Supervised Learning", "Swin Transformer", "Pretraining"],
+      "related_projects": ["swin-transformer-pretraining"]
+    },
+    {
+      "id": "dinov3-explained",
+      "title": "DINOv3 Explained: The Game-Changing Vision Transformer That's Redefining Computer Vision",
+      "url": "https://medium.com/@imabhi1216/dinov3-explained-the-game-changing-vision-transformer-thats-redefining-computer-vision-cd63646141e6",
+      "topics": ["Vision Transformers", "Self-Supervised Learning", "Foundation Models"],
+      "summary": "Discover DINOv3, Meta's revolutionary self-supervised vision transformer that's setting new benchmarks in computer vision without requiring labeled data.",
+      "key_concepts": ["DINOv2", "Self-Supervised Learning", "Vision Transformers", "Foundation Models"],
+      "related_projects": ["chest-xray-classifier", "plant-disease-detection"]
+    },
+    {
+      "id": "feature-pyramid-networks",
+      "title": "Feature Pyramid Networks: Solving the Scale Problem in Object Detection",
+      "url": "https://medium.com/@imabhi1216/feature-pyramid-networks-solving-the-scale-problem-in-object-detection-99736287ab1b",
+      "topics": ["Object Detection", "Computer Vision", "Multi-Scale Features"],
+      "summary": "Learn how Feature Pyramid Networks revolutionize object detection by effectively handling objects at different scales through multi-scale feature representations.",
+      "key_concepts": ["FPN", "Multi-Scale Detection", "Object Detection", "Feature Pyramids"],
+      "related_projects": ["mammography-lesion-detection"]
+    },
+    {
+      "id": "vision-transformer-pooling",
+      "title": "Beyond CLS: Advanced Pooling Strategies for Vision Transformers",
+      "url": "https://medium.com/@imabhi1216/beyond-cls-advanced-pooling-strategies-for-vision-transformers-8df1785ec81c",
+      "topics": ["Vision Transformers", "Deep Learning", "Architecture Design"],
+      "summary": "Explore advanced pooling techniques beyond the standard CLS token approach, uncovering methods to enhance Vision Transformer performance and representation learning.",
+      "key_concepts": ["Vision Transformers", "Pooling Strategies", "Attention Mechanisms", "Feature Extraction"],
+      "related_projects": ["chest-xray-classifier"]
+    },
+    {
+      "id": "llama-3-explained",
+      "title": "Llama 3.1: Everything You Need to Know About Meta's Latest AI-Language Model",
+      "url": "https://medium.com/@imabhi1216/llama-3-1-everything-you-need-to-know-about-metas-latest-ai-language-model-6008a415e181",
+      "topics": ["LLMs", "NLP", "Llama Models"],
+      "summary": "Meta's Llama 3.1 is here, and it's revolutionizing the AI landscape. Everything you need to know about the latest advancements in natural language processing.",
+      "key_concepts": ["Llama 3", "Large Language Models", "Fine-tuning", "Open Source AI"],
+      "related_projects": ["llama3-seo-finetuning", "farmer-chatbot"]
+    },
+    {
+      "id": "rag-chunk-size",
+      "title": "Basic to Advanced RAG using LlamaIndex: Estimating Optimal Chunk Size",
+      "url": "https://medium.com/@imabhi1216/basic-to-advanced-rag-using-llamaindex-estimating-optimal-chunk-size-2-4935bdb0ef4a",
+      "topics": ["RAG", "LlamaIndex", "NLP", "LLMs"],
+      "summary": "Explore the importance of the chunk_size parameter in RAG applications, discussing its impact on efficiency and accuracy.",
+      "key_concepts": ["RAG", "Chunk Size", "LlamaIndex", "Retrieval", "Embedding"],
+      "related_projects": ["farmer-chatbot"]
+    },
+    {
+      "id": "vision-transformer-fine-tuning",
+      "title": "Fine-Tuning a Vision Transformer (ViT) Model With a Custom Dataset",
+      "url": "https://medium.com/@imabhi1216/fine-tuning-a-vision-transformer-vit-model-with-a-custom-dataset-37840e4e9268",
+      "topics": ["Vision Transformers", "Fine-tuning", "Transfer Learning"],
+      "summary": "Step-by-step guide to fine-tuning a ViT model on a custom dataset, including loading the dataset, defining data splits, and training the model.",
+      "key_concepts": ["Vision Transformers", "Fine-tuning", "Transfer Learning", "Custom Dataset"],
+      "related_projects": ["plant-disease-detection", "chest-xray-classifier"]
+    },
+    {
+      "id": "rag-rerankers",
+      "title": "Basic to Advanced RAG: Optimizing Performance with Rerankers",
+      "url": "https://medium.com/@imabhi1216/basic-to-advanced-rag-using-llamaindex-optimizing-performance-with-rerankers-4-7e1131ff08f2",
+      "topics": ["RAG", "LlamaIndex", "Reranking", "NLP"],
+      "summary": "Explore how rerankers enhance the efficiency and precision of RAG systems by sorting and selecting the most relevant information.",
+      "key_concepts": ["RAG", "Reranking", "Information Retrieval", "LlamaIndex"],
+      "related_projects": ["farmer-chatbot"]
+    },
+    {
+      "id": "gemma-2-highlights",
+      "title": "Essential Highlights from Gemma 2: Improving Open Language Models",
+      "url": "https://medium.com/@imabhi1216/essential-highlights-from-gemma-2-improving-open-language-models-at-a-practical-size-4acd315caaa1",
+      "topics": ["LLMs", "Gemma", "Open Source AI"],
+      "summary": "Key insights from Gemma 2, focusing on advancements in improving open language models while maintaining practical size and efficiency.",
+      "key_concepts": ["Gemma 2", "Open LLMs", "Model Efficiency", "Small Language Models"],
+      "related_projects": []
+    },
+    {
+      "id": "rag-implementation",
+      "title": "Implementing RAG Using LangChain and Ollama",
+      "url": "https://medium.com/@imabhi1216/implementing-rag-using-langchain-and-ollama-93bdf4a9027c",
+      "topics": ["RAG", "LangChain", "Ollama", "LLMs"],
+      "summary": "Covers the implementation of Retrieval-Augmented Generation (RAG) using LangChain and Ollama, detailing practical steps for developers.",
+      "key_concepts": ["RAG", "LangChain", "Ollama", "Vector Database", "Embeddings"],
+      "related_projects": ["farmer-chatbot"]
+    }
+  ],
+
+  "common_questions": {
+    "about_background": "I'm a Data Scientist from IIT Kharagpur with 2 years of experience in AI/ML, specializing in Computer Vision and NLP, particularly in healthcare applications. I've worked on everything from medical imaging systems to multilingual chatbots.",
+
+    "about_healthcare_ai": "Healthcare AI is my passion! I've built mammography lesion detection systems achieving 15.2% mAP improvement, chest X-ray classifiers using DINOv2, and pretrained foundation models for medical imaging. I focus on creating clinically valuable AI that assists healthcare professionals.",
+
+    "about_technical_expertise": "I specialize in Vision Transformers (DINOv2, Swin, ViT), object detection (YOLO, GroundingDINO), LLMs (Llama 3, RAG systems), and deployment (ONNX, TensorRT). I've worked extensively with PyTorch and have deep experience in self-supervised learning.",
+
+    "why_hire_me": "I bring a unique combination of research depth (IIT Kharagpur background), practical experience (2 years production deployments), and specialized expertise (healthcare AI). I don't just build models—I solve real problems with measurable impact, like improving cancer detection accuracy by 15% or helping farmers with multilingual AI chatbots.",
+
+    "current_work": "I'm currently a Data Scientist at Neurologic-ai, working on AI-driven healthcare solutions for medical diagnostics and patient care optimization. I'm particularly focused on developing robust, explainable AI systems for clinical deployment.",
+
+    "available_for_work": "I'm always open to discussing exciting opportunities, especially in healthcare AI, computer vision research, or roles involving cutting-edge ML engineering. Feel free to reach out via email or schedule a call!",
+
+    "strongest_skills": "My strongest skills are Computer Vision (especially Vision Transformers and medical imaging), Deep Learning (PyTorch, self-supervised learning), and deploying production ML systems. I excel at taking research ideas and turning them into practical, deployed solutions.",
+
+    "favorite_project": "The Farmer Support ChatBot holds a special place because it combines technical complexity (multilingual NLP, voice AI, RAG) with real social impact—helping farmers get agricultural advice in their native language. But technically, the mammography lesion detection system was the most challenging and rewarding.",
+
+    "blog_writing": "I write technical articles on Medium to share knowledge and deepen my own understanding. I focus on explaining complex topics like Vision Transformers, RAG systems, and medical imaging AI in an accessible way. I've published 20+ articles covering cutting-edge research and practical implementations."
+  }
+}

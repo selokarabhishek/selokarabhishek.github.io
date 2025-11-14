@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Model Playground | Abhishek Selokar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="model-playground.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">AS</a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="model-playground.html" class="nav-link active">Model Playground</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Playground Section -->
+    <section class="playground-section">
+        <div class="container">
+            <div class="playground-header">
+                <h1><i class="fas fa-flask"></i> AI Model Playground</h1>
+                <p>Try my trained models live! Upload images and see AI in action.</p>
+            </div>
+
+            <div class="playground-content">
+                <!-- Model Selector -->
+                <div class="model-selector">
+                    <h3>Select a Model</h3>
+                    <div class="model-cards">
+                        <div class="model-card active" data-model="plant-disease">
+                            <i class="fas fa-leaf"></i>
+                            <h4>Plant Disease Detection</h4>
+                            <p>DINOv2-based classifier</p>
+                            <span class="model-status">Ready</span>
+                        </div>
+                        <div class="model-card disabled" data-model="chest-xray">
+                            <i class="fas fa-x-ray"></i>
+                            <h4>Chest X-ray Classifier</h4>
+                            <p>Multi-pathology detection</p>
+                            <span class="model-status">Coming Soon</span>
+                        </div>
+                        <div class="model-card disabled" data-model="general-cv">
+                            <i class="fas fa-image"></i>
+                            <h4>General Image Analysis</h4>
+                            <p>Object detection & classification</p>
+                            <span class="model-status">Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upload Section -->
+                <div class="upload-section">
+                    <div class="upload-area" id="upload-area">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Upload an Image</h3>
+                        <p>Drag & drop or click to browse</p>
+                        <input type="file" id="file-input" accept="image/*" hidden>
+                        <button class="btn btn-primary" id="browse-btn">Browse Files</button>
+                    </div>
+
+                    <div class="preview-area" id="preview-area" style="display: none;">
+                        <img id="preview-image" alt="Preview">
+                        <button class="btn btn-secondary" id="clear-btn">
+                            <i class="fas fa-times"></i> Clear
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div class="results-section" id="results-section" style="display: none;">
+                    <h3><i class="fas fa-chart-bar"></i> Results</h3>
+
+                    <div class="results-grid">
+                        <!-- Prediction -->
+                        <div class="result-card">
+                            <h4>Prediction</h4>
+                            <div class="prediction-result" id="prediction-result">
+                                <div class="prediction-label">Tomato Late Blight</div>
+                                <div class="prediction-confidence">92.3% confidence</div>
+                            </div>
+                        </div>
+
+                        <!-- Processing Time -->
+                        <div class="result-card">
+                            <h4>Performance</h4>
+                            <div class="performance-metrics">
+                                <div class="metric">
+                                    <span class="metric-label">Processing Time</span>
+                                    <span class="metric-value" id="processing-time">0.84s</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">Model Size</span>
+                                    <span class="metric-value">12MB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Attention Map -->
+                    <div class="visualization-section">
+                        <h4><i class="fas fa-eye"></i> Attention Map</h4>
+                        <p class="section-description">Visualization of where the model focuses</p>
+                        <div class="attention-map" id="attention-map">
+                            <canvas id="attention-canvas"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Class Probabilities -->
+                    <div class="visualization-section">
+                        <h4><i class="fas fa-chart-bar"></i> Top Predictions</h4>
+                        <div class="probability-bars" id="probability-bars">
+                            <!-- Will be populated dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Technical Explanation -->
+                    <div class="explanation-section">
+                        <h4><i class="fas fa-info-circle"></i> How It Works</h4>
+                        <div class="explanation-content" id="explanation-content">
+                            <p>This model uses a <strong>DINOv2 vision transformer</strong> pretrained with self-supervised learning. Here's what happens:</p>
+                            <ol>
+                                <li><strong>Feature Extraction:</strong> The DINOv2 backbone extracts rich visual features from the image</li>
+                                <li><strong>Classification:</strong> A learned classification head predicts disease categories</li>
+                                <li><strong>Attention:</strong> Self-attention mechanisms identify relevant image regions</li>
+                            </ol>
+                            <p class="tech-details">
+                                <strong>Architecture:</strong> DINOv2-ViT-S/14 + Custom Classification Head<br>
+                                <strong>Training:</strong> Fine-tuned on 30K+ plant disease images<br>
+                                <strong>Accuracy:</strong> 94% on test set
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Demo Notice -->
+                <div class="demo-notice">
+                    <i class="fas fa-info-circle"></i>
+                    <p><strong>Note:</strong> This is a demo interface. The actual model inference will be implemented with TensorFlow.js or ONNX Runtime for client-side processing. For now, results shown are simulated to demonstrate the UI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="model-playground.js"></script>
+</body>
+</html>
