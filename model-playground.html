@@ -6,6 +6,7 @@
     <title>AI Model Playground | Abhishek Selokar</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="model-playground.css">
+    <link rel="stylesheet" href="ai-chat-widget.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
@@ -14,16 +15,23 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">AS</a>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="index.html#blog" class="nav-link">Blog</a></li>
                 <li><a href="index.html#projects" class="nav-link">Projects</a></li>
-                <li><a href="model-playground.html" class="nav-link active">Model Playground</a></li>
+                <li><a href="model-playground.html" class="nav-link active">AI Playground</a></li>
                 <li><a href="index.html#contact" class="nav-link">Contact</a></li>
             </ul>
             <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
                 <i class="fas fa-sun"></i>
             </button>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </nav>
 
@@ -156,5 +164,6 @@
 
     <script src="script.js"></script>
     <script src="model-playground.js"></script>
+    <script src="ai-chat-controller.js"></script>
 </body>
 </html>

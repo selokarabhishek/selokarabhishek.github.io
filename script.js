@@ -119,6 +119,7 @@ let textArrayIndex = 0;
 let charIndex = 0;
 
 function type() {
+    if (!typedTextSpan) return; // Guard clause
     if (charIndex < textArray[textArrayIndex].length) {
         typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
         charIndex++;
@@ -129,6 +130,7 @@ function type() {
 }
 
 function erase() {
+    if (!typedTextSpan) return; // Guard clause
     if (charIndex > 0) {
         typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
         charIndex--;
@@ -140,9 +142,11 @@ function erase() {
     }
 }
 
-// Start typing animation when page loads
+// Start typing animation when page loads (only if element exists)
 document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(type, newTextDelay + 250);
+    if (typedTextSpan) {
+        setTimeout(type, newTextDelay + 250);
+    }
 });
 
 // ==================== SMOOTH SCROLL ====================

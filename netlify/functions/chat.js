@@ -13,10 +13,14 @@ exports.handler = async function(event, context) {
     }
 
     // CORS headers
+    // IMPORTANT: Change '*' to your actual domain in production to prevent API key theft!
+    // Example: 'Access-Control-Allow-Origin': 'https://yourdomain.netlify.app'
+    const allowedOrigin = process.env.ALLOWED_ORIGIN || event.headers.origin || '*';
     const headers = {
-        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Origin': allowedOrigin,
         'Access-Control-Allow-Headers': 'Content-Type',
         'Access-Control-Allow-Methods': 'POST, OPTIONS',
+        'Access-Control-Allow-Credentials': 'true',
         'Content-Type': 'application/json'
     };
 

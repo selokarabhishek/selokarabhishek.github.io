@@ -8,6 +8,7 @@ class AIChatController {
         this.knowledgeBase = null;
         this.isTyping = false;
         this.conversationHistory = [];
+        this.lastMessageTime = null;
 
         // Configuration
         this.config = {
@@ -41,6 +42,15 @@ class AIChatController {
             console.log('Knowledge base loaded successfully');
         } catch (error) {
             console.error('Failed to load knowledge base:', error);
+            // Initialize with empty structure to prevent crashes
+            this.knowledgeBase = {
+                personal_info: { name: 'Abhishek Selokar', title: 'Data Scientist' },
+                professional_summary: 'Data Scientist specializing in AI/ML',
+                projects: [],
+                blog_posts: [],
+                skills: {},
+                experience: []
+            };
         }
     }
 
@@ -133,11 +143,11 @@ class AIChatController {
     }
 
     toggleChat() {
-        const window = document.getElementById('ai-chat-window');
+        const chatWindow = document.getElementById('ai-chat-window');
         const badge = document.querySelector('.ai-chat-badge');
 
         this.isOpen = !this.isOpen;
-        window.classList.toggle('open', this.isOpen);
+        chatWindow.classList.toggle('open', this.isOpen);
 
         if (this.isOpen) {
             document.getElementById('ai-chat-input').focus();
@@ -164,7 +174,7 @@ class AIChatController {
     showWelcomeMessage() {
         const welcomeHTML = `
             <div class="ai-welcome-message">
-                <h4><i class="fas fa-hand-wave"></i> Hey there!</h4>
+                <h4>👋 Hey there!</h4>
                 <p>I'm Abhi's AI assistant. I can help you explore his projects, explain his work, or answer any questions about his expertise in AI/ML!</p>
                 <div class="ai-welcome-actions">
                     <button class="ai-welcome-action" data-query="Tell me about your healthcare AI projects">
@@ -218,6 +228,21 @@ class AIChatController {
         const message = input.value.trim();
 
         if (!message || this.isTyping) return;
+
+        // Input validation
+        const MAX_MESSAGE_LENGTH = 500;
+        if (message.length > MAX_MESSAGE_LENGTH) {
+            this.addMessage('assistant', `Please keep your message under ${MAX_MESSAGE_LENGTH} characters. Your message was ${message.length} characters.`);
+            return;
+        }
+
+        // Basic rate limiting (max 1 message per 2 seconds)
+        const now = Date.now();
+        if (this.lastMessageTime && (now - this.lastMessageTime) < 2000) {
+            this.addMessage('assistant', 'Please wait a moment before sending another message.');
+            return;
+        }
+        this.lastMessageTime = now;
 
         // Clear input
         input.value = '';
