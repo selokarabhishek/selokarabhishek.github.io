@@ -563,21 +563,6 @@ section {
     content: ' · ';
 }
 
-.experience-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    margin-top: 0.75rem;
-    transition: gap 0.3s ease;
-}
-
-.experience-link:hover {
-    gap: 1rem;
-}
-
 /* ==================== BLOG SECTION ==================== */
 .blog {
     background: var(--darker-bg);
@@ -634,6 +619,27 @@ section {
 /* ==================== PROJECTS SECTION ==================== */
 .projects {
     background: var(--dark-bg);
+}
+
+.project-group-title {
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray-text);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.project-group-title:not(:first-of-type) {
+    margin-top: var(--spacing-lg);
+}
+
+.project-group-title i {
+    color: var(--primary-color);
 }
 
 .projects-list {
@@ -699,19 +705,6 @@ section {
     content: ' · ';
     color: var(--gray-text);
     font-weight: 400;
-}
-
-.project-context {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--gray-text);
-    font-size: 0.85rem;
-    margin: 0;
-}
-
-.project-context i {
-    color: var(--primary-color);
 }
 
 /* ==================== CONTACT SECTION ==================== */
@@ -893,13 +886,9 @@ section {
         font-size: 2rem;
     }
 
-    .project-item {
-        flex-direction: column;
-    }
-
     .project-thumb {
-        width: 100%;
-        height: 160px;
+        width: 64px;
+        height: 64px;
     }
 }
 
